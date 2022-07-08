@@ -771,9 +771,9 @@ function Get-FullNormalizedPath {
 ################################################################################
 
 
-if ($xppBinariesSearch.Contains("`n"))
+if ($xppBinariesSearch.Contains(";"))
 {
-    [string[]]$xppBinariesSearch = $xppBinariesSearch -split "`n"
+    [string[]]$xppBinariesSearch = $xppBinariesSearch -split ";"
 }
 
 Write-Verbose "Loading compiled helper $PSScriptRoot\VstsTaskSdk.dll."
